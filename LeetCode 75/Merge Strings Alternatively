@@ -1,0 +1,21 @@
+class Solution {
+public:
+    string mergeAlternately(string word1, string word2) {
+        int length1 = word1.length();
+        int length2 = word2.length();
+        string word3;
+        int low = 0, high = 0;
+
+        while (low < length1 || high < length2) {
+            if (low < length1) {
+                word3.push_back(word1[low]);
+                low++;
+            }
+            if (high < length2) {
+                word3.push_back(word2[high]);
+                high++;
+            }
+        }
+        return word3;
+    }
+};
