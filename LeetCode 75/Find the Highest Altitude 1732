@@ -1,0 +1,12 @@
+class Solution {
+public:
+    int largestAltitude(vector<int>& gain) {
+        int currentsum=0;
+        int altitude=0;
+        for(int n:gain){
+            currentsum+=n;
+            altitude=max(altitude,currentsum);
+        }
+        return altitude;
+    }
+};
