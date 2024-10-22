@@ -1,0 +1,19 @@
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        int zero=0;
+        int count1=count(nums.begin(),nums.end(),0);
+        vector<int>vect;
+        for(int n:nums){
+            if(n==0)
+            continue;
+            else
+            vect.push_back(n);
+        }
+        while(count1!=0){
+        vect.push_back(0);
+        count1--;
+        }
+        nums=vect;
+    }
+};
